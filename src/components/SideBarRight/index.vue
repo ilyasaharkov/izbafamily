@@ -17,7 +17,9 @@
           <a
               v-for="contact in headerViewObject.contacts"
               :key="contact.id"
-              :href="`tel: ${contact.name}`">{{ contact.name }}</a>
+              :href="`tel: ${contact.name}`"
+              class="header__menu--mobile__contacts"
+          >{{ contact.name }}</a>
         </div>
       </div>
     </div>
@@ -106,6 +108,11 @@ export default {
   .header__menu--mobile__logo {
     width: 75px;
     height: 60px;
+  }
+  .header__menu--mobile__contacts {
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 16px;
   }
 }
 </style>
