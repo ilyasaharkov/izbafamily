@@ -1,0 +1,9 @@
+// Сброс стилей
+@import 'normalize.scss';
+@import "container.scss";
+@import '_variables.scss';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
