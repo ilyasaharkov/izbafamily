@@ -4,6 +4,8 @@
     <Hero />
     <Form />
     <OurСouples />
+    <Responsibilities />
+    <CheckingCouples />
     <SideBarRight />
   </div>
 </template>
@@ -13,6 +15,8 @@ import Header from "../src/components/Header/index.vue";
 import Hero from "../src/components/Hero/index.vue";
 import Form from "../src/components/Form/index.vue";
 import OurСouples from "../src/components/OurСouples/index.vue";
+import Responsibilities from '../src/components/Responsibilities/index.vue'
+import CheckingCouples from '../src/components/CheckingCouples/index.vue'
 import SideBarRight from "../src/components/SideBarRight/index.vue";
 export default {
   name: "App",
@@ -21,7 +25,9 @@ export default {
     Hero,
     SideBarRight,
     Form,
-    OurСouples
+    OurСouples,
+    Responsibilities,
+    CheckingCouples
   },
 };
 </script>

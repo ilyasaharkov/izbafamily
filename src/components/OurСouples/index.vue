@@ -59,7 +59,6 @@ export default {
     }
     .our-couples__card--wrapper {
       display: grid;
-      //grid-template-columns: repeat(1, 1fr);
       grid-template-columns: repeat(
                 auto-fill, minmax(260px, 1fr));
       gap: 15px;
@@ -69,6 +68,17 @@ export default {
     }
   }
   @media screen and (min-width: 1200px) {
+    .our-couples__title {
+      font-size: 36px;
+      margin: 0 0 20px 0;
+    }
+    .our-couples__subtitle {
+      font-size: 18px;
+      margin: 0 0 20px 0;
+    }
+    .our-couples__offer {
+      font-size: 18px;
+    }
     .our-couples__card--wrapper {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
