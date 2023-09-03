@@ -1,5 +1,5 @@
 <template>
-  <div class="checking-couples" style="padding: 0 0 100px 0">
+  <div class="checking-couples">
     <div class="container">
       <h2 class="checking-couples__title">
         {{ checkingCouplesModelViewObject.title }}
@@ -164,6 +164,8 @@ export default {
     display: flex;
     align-items: center;
     gap: 15px;
+    align-self: center;
+    justify-content: center;
     &:first-child {
       flex: 1;
     }

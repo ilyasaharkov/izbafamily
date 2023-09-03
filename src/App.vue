@@ -6,6 +6,7 @@
     <OurСouples />
     <Responsibilities />
     <CheckingCouples />
+    <Prices />
     <SideBarRight />
   </div>
 </template>
@@ -17,6 +18,7 @@ import Form from "../src/components/Form/index.vue";
 import OurСouples from "../src/components/OurСouples/index.vue";
 import Responsibilities from '../src/components/Responsibilities/index.vue'
 import CheckingCouples from '../src/components/CheckingCouples/index.vue'
+import Prices from '../src/components/Prices/index.vue'
 import SideBarRight from "../src/components/SideBarRight/index.vue";
 export default {
   name: "App",
@@ -27,7 +29,8 @@ export default {
     Form,
     OurСouples,
     Responsibilities,
-    CheckingCouples
+    CheckingCouples,
+    Prices
   },
 };
 </script>
