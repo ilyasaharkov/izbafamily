@@ -76,10 +76,10 @@ export default {
     z-index: 2;
   }
   .hero__title {
-    font-size: 24px;
-    color: $white;
+    font-size: 30px;
+    color: white;
     margin: 0 0 20px 0;
-    line-height: 110%;
+    line-height: 140%;
   }
   .hero__description {
     font-size: 14px;
@@ -90,7 +90,7 @@ export default {
   }
   .hero__button {
     padding: 14.5px 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     font-size: 14px;
     background: $f15c63;
@@ -101,7 +101,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     column-gap: 30px;
-    row-gap: 5px;
+    row-gap: 25px;
     margin: 40px 0 0 0;
   }
   .hero-offers__block--top {
@@ -171,7 +171,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
-    row-gap: 5px;
+    row-gap: 25px;
     margin: 40px 0 0 0;
   }
   .hero-offers__block--top {
@@ -199,7 +199,7 @@ export default {
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 60px 0 20px 0;
+    padding: 60px 0 40px 0;
   }
   .hero-layout {
     position: absolute;
@@ -236,7 +236,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
-    row-gap: 5px;
+    row-gap: 25px;
     margin: 60px 0 0 0;
   }
   .hero-offers__block--top {

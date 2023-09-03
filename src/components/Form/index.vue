@@ -52,7 +52,7 @@ export default {
     font-weight: 600;
     background-color: $f15c63;
     border: 1px solid $f15c63;
-    border-radius: 20px;
+    border-radius: 10px;
     color: $white;
   }
 }

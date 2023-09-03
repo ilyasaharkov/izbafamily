@@ -63,7 +63,7 @@ export default {
                 auto-fill, minmax(260px, 1fr));
       gap: 15px;
       padding: 20px 10px 20px 10px;
-      background-color: #e1e1e1;
+      background-color: $white-smoke;
       border-radius: 20px;
     }
   }
