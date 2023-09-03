@@ -1,0 +1,102 @@
+<template>
+  <div class="our-couples__card" >
+    <img
+        class="our-couples__card--image"
+        :src="item.image"
+        :alt="item.title">
+    <div class="our-couples__card--layout">
+      <p class="our-couples__card--title">{{ item.title }}</p>
+      <p class="our-couples__card--description">{{ item.description }}</p>
+      <button class="our-couples__card--button">
+        {{ button }}
+      </button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "card",
+  props: {
+    item: {
+      type: Object,
+      default: () => {}
+    },
+    button: {
+      type: String,
+      default: ''
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import "/src/assets/scss/_variables.scss";
+ @media screen and (min-width: 340px) {
+   .our-couples__card {
+     background: $white;
+     padding: 0 0 20px 0;
+     border-radius: 20px;
+   }
+   .our-couples__card--layout {
+     padding: 15px 15px 0 15px;
+   }
+   .our-couples__card--image {
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+     margin: 0 0 10px 0;
+   }
+   .our-couples__card--title {
+     margin: 0 0 5px 0;
+     font-weight: 600;
+   }
+   .our-couples__card--description {
+     font-weight: 500;
+     opacity: 0.9;
+     font-size: 14px;
+   }
+   .our-couples__card--button {
+     margin: 20px 0 0 0;
+     width: 100%;
+     background: $f15c63;
+     color: $white;
+     border-radius: 10px;
+     padding: 11.5px 0;
+     font-weight: 500;
+     font-size: 14px;
+   }
+ }
+ @media screen and (min-width: 1200px) {
+   .our-couples__card {
+     background: $white;
+     padding: 0 0 20px 0;
+   }
+   .our-couples__card--layout {
+     padding: 15px 15px 0 15px;
+   }
+   .our-couples__card--image {
+     border-top-left-radius: 20px;
+     border-top-right-radius: 20px;
+     margin: 0 0 10px 0;
+   }
+   .our-couples__card--title {
+     margin: 0 0 5px 0;
+     font-weight: 600;
+   }
+   .our-couples__card--description {
+     font-weight: 500;
+     opacity: 0.9;
+     font-size: 14px;
+   }
+   .our-couples__card--button {
+     margin: 20px 0 0 0;
+     width: 100%;
+     background: $f15c63;
+     color: $white;
+     border-radius: 10px;
+     padding: 11.5px 0;
+     font-weight: 500;
+     font-size: 14px;
+   }
+ }
+</style>
