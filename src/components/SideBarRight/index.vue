@@ -1,9 +1,9 @@
 <template>
   <div v-if="sideBarRightObject.status" class="header__menu--mobile__layout">
     <div class="header__menu--mobile">
-      <div class="header__menu--mobile__wrapper">
+      <div class="header__menu--mobile__wrapper" :style="`height: ${height}px`">
         <div class="header__menu--mobile__close" @click="changeSideBarRightObject">
-          <img  src="@/assets/images/close.png"/>
+          <img src="@/assets/images/close.png"/>
         </div>
         <div class="header__menu--mobile__items">
           <img class="header__menu--mobile__logo" :src="headerViewObject.icon" alt="Логотип">
@@ -27,17 +27,26 @@
 </template>
 
 <script>
+import {onMounted, ref} from 'vue'
 import {
   sideBarRightObject,
   changeSideBarRightObject,
+  getHeightClient
 } from "../../viewModels/SideBarRight/";
 import { headerViewObject } from "../../viewModels/Header/";
 export default {
   setup() {
+    const height = ref()
+
+    onMounted(() => {
+      height.value = getHeightClient()
+    })
+
     return {
       sideBarRightObject,
       headerViewObject,
       changeSideBarRightObject,
+      height
     };
   },
 };
@@ -58,7 +67,8 @@ export default {
   .header__menu--mobile__wrapper {
     display: flex;
     align-items: center;
-    height: 100%;
+    position: sticky;
+    top: 0;
   }
   .header__menu--mobile__close {
     border: none;
@@ -87,12 +97,12 @@ export default {
     display: flex;
     align-self: baseline;
     align-items: center;
-    background: white;
+    background: $white;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5px 60px;
-    height: 100%;
+    padding: 5px 30px 30px 30px;
     gap: 30px;
+    height: inherit;
   }
   .header__menu--mobile__item--wrapper {
     display: flex;
@@ -104,6 +114,7 @@ export default {
     border: none;
     font-weight: 500;
     font-size: 16px;
+    color: $black;
   }
   .header__menu--mobile__logo {
     width: 75px;
@@ -113,6 +124,7 @@ export default {
     font-weight: 500;
     text-decoration: none;
     font-size: 16px;
+    color: $black;
   }
 }
 </style>
