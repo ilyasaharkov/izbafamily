@@ -56,9 +56,9 @@ export default {
 @media screen and (min-width: 1200px) {
   .prices { margin: 0 0 60px 0 }
   .prices-tittle {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 600;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
   }
   .prices-card__wrapper {
     display: grid;
@@ -66,12 +66,12 @@ export default {
     gap: 30px;
   }
   .prices-button {
-    padding: 10px 0;
+    padding: 15px 0;
     background: $f15c63;
     width: 100%;
     font-size: 16px;
     font-weight: 500;
-    margin: 20px 0 0 0;
+    margin: 40px 0 0 0;
     border-radius: 10px;
     color: $white;
   }
