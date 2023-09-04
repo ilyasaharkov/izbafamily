@@ -1,0 +1,23 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - apt-get update -qy
+    - apt-get install -y rsync
+    - rsync -rav --delete dist/ user@example.com:/path/to/destination
+  only:
+    - master
