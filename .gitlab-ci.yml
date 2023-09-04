@@ -15,9 +15,9 @@ build:
 
 deploy:
   stage: deploy
-  script:
-    - apt-get update -qy
-    - apt-get install -y rsync
-    - rsync -rav --delete dist/ user@example.com:/path/to/destination
+#  script:
+#    - apt-get update -qy
+#    - apt-get install -y rsync
+#    - rsync -rav --delete dist/ user@example.com:/path/to/destination
   only:
     - master
