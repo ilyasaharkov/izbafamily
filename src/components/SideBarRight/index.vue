@@ -100,7 +100,7 @@ export default {
     background: $white;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5px 30px 30px 30px;
+    padding: 5px 50px 30px 50px;
     gap: 30px;
     height: inherit;
   }
