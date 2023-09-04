@@ -40,6 +40,9 @@ export default {
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
 @media screen and (min-width: 340px) {
+  .checking-couples {
+    margin: 0 0 20px 0;
+  }
   .checking-couples__title {
     font-size: 26px;
     margin: 0 0 20px 0;
@@ -89,6 +92,9 @@ export default {
 }
 
 @media screen and (min-width: 992px) {
+  .checking-couples {
+    margin: 0 0 60px 0;
+  }
   .checking-couples__title {
     font-size: 36px;
     margin: 0 0 20px 0;
