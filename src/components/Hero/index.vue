@@ -53,6 +53,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+
+.hero__button {
+  @include button()
+}
 
 @media screen and (min-width: 340px) {
   .hero {
@@ -87,15 +92,6 @@ export default {
     width: 90%;
     margin: 0 0 30px 0;
     line-height: 130%;
-  }
-  .hero__button {
-    padding: 14.5px 50px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    background: $f15c63;
-    color: $white;
-    font-weight: 400;
   }
   .hero-offers__wrapper {
     display: grid;
@@ -158,15 +154,6 @@ export default {
     margin: 0 0 30px 0;
     line-height: 130%;
   }
-  .hero__button {
-    padding: 14.5px 50px;
-    border-radius: 20px;
-    border: none;
-    font-size: 14px;
-    background: $f15c63;
-    color: $white;
-    font-weight: 400;
-  }
   .hero-offers__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -225,12 +212,6 @@ export default {
     color: $white;
     width: 760px;
     margin: 0 0 50px 0;
-  }
-  .hero__button {
-    padding: 12.5px 45px;
-    border-radius: 20px;
-    border: none;
-    font-size: 18px;
   }
   .hero-offers__wrapper {
     display: grid;

@@ -32,6 +32,11 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+
+.our-couples__card--button {
+  @include buttonWidth()
+}
  @media screen and (min-width: 340px) {
    .our-couples__card {
      background: $white;
@@ -53,16 +58,6 @@ export default {
    .our-couples__card--description {
      font-weight: 500;
      opacity: 0.9;
-     font-size: 14px;
-   }
-   .our-couples__card--button {
-     margin: 20px 0 0 0;
-     width: 100%;
-     background: $f15c63;
-     color: $white;
-     border-radius: 10px;
-     padding: 11.5px 0;
-     font-weight: 500;
      font-size: 14px;
    }
  }
@@ -88,15 +83,6 @@ export default {
      opacity: 0.9;
      font-size: 14px;
    }
-   .our-couples__card--button {
-     margin: 20px 0 0 0;
-     width: 100%;
-     background: $f15c63;
-     color: $white;
-     border-radius: 10px;
-     padding: 11.5px 0;
-     font-weight: 500;
-     font-size: 14px;
-   }
+
  }
 </style>

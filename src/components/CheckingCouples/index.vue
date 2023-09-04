@@ -39,12 +39,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+.checking-couples__title {
+  @include title()
+}
 @media screen and (min-width: 340px) {
   .checking-couples {
-    margin: 0 0 20px 0;
-  }
-  .checking-couples__title {
-    font-size: 26px;
     margin: 0 0 20px 0;
   }
   .checking-couples__subtitle {
@@ -95,10 +95,6 @@ export default {
   .checking-couples {
     margin: 0 0 60px 0;
   }
-  .checking-couples__title {
-    font-size: 36px;
-    margin: 0 0 20px 0;
-  }
   .checking-couples__subtitle {
     font-size: 18px;
     margin: 0 0 20px 0;
@@ -146,10 +142,6 @@ export default {
 }
 
 @media screen and (min-width: 1200px) {
-  .checking-couples__title {
-    font-size: 36px;
-    margin: 0 0 20px 0;
-  }
   .checking-couples__subtitle {
     font-size: 18px;
     margin: 0 0 20px 0;

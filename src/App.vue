@@ -8,6 +8,8 @@
     <CheckingCouples />
     <Prices />
     <Reviews />
+    <LookingJob />
+    <Footer />
     <SideBarRight />
   </div>
 </template>
@@ -21,6 +23,8 @@ import Responsibilities from '../src/components/Responsibilities/index.vue'
 import CheckingCouples from '../src/components/CheckingCouples/index.vue'
 import Prices from '../src/components/Prices/index.vue'
 import Reviews from '../src/components/Reviews/index.vue'
+import LookingJob from '../src/components/LookingJob/index.vue'
+import Footer from "../src/components/Footer/index.vue";
 import SideBarRight from "../src/components/SideBarRight/index.vue";
 export default {
   name: "App",
@@ -33,7 +37,9 @@ export default {
     Responsibilities,
     CheckingCouples,
     Prices,
-    Reviews
+    Reviews,
+    LookingJob,
+    Footer
   },
 };
 </script>

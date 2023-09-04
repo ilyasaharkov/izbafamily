@@ -28,13 +28,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+.responsibilities-block__title {
+  @include title();
+}
+
   @media screen and (min-width: 340px) {
     .responsibilities-block {
       margin: 0 0 40px 0;
-    }
-    .responsibilities-block__title {
-      font-size: 26px;
-      margin: 0 0 20px 0;
     }
     .responsibilities-block__card--wrapper {
       display: grid;
@@ -44,6 +45,9 @@ export default {
       background:  $white-smoke;
       border-radius: 20px;
       padding: 15px;
+    }
+    .responsibilities-block__title {
+      width: auto;
     }
     .responsibilities-block__card {
       display: flex;
@@ -67,11 +71,6 @@ export default {
     .responsibilities-block {
       margin: 0 0 40px 0;
     }
-    .responsibilities-block__title {
-      font-size: 36px;
-      margin: 0 0 20px 0;
-      width: 801px;
-    }
     .responsibilities-block__card--wrapper {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -79,6 +78,9 @@ export default {
       border-radius: 20px;
       padding: 20px;
     }
+    .responsibilities-block__title {
+       width: 801px;
+     }
     .responsibilities-block__card {
       display: flex;
       align-items: center;

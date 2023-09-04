@@ -30,20 +30,26 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
 
-@media screen and (min-width: 340px) {}
+.reviews__button {
+  @include button();
+  width: 100%;
+  margin: 30px 0 0 0;
+}
+
+.reviews__title {
+  @include title()
+}
+
+@media screen and (min-width: 340px) {
+  .reviews {
+    padding: 20px 10px 20px 10px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .reviews {
     padding: 40px 30px 40px 30px;
-  }
-  .reviews__button {
-    padding: 15.5px 0;
-    text-align: center;
-    width: 100%;
-    background-color: $f15c63;
-    border-radius: 15px;
-    font-weight: 500;
-    color: $white;
   }
 }
 

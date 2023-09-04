@@ -27,6 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+.form-button {
+  @include button
+}
 @media screen and (min-width: 340px) {
   .form {
     margin: 20px 0;
@@ -43,17 +47,6 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 10px;
-  }
-  .form-button {
-    transition: all 0.3s ease;
-    width: 100%;
-    padding: 15.5px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    background-color: $f15c63;
-    border: 1px solid $f15c63;
-    border-radius: 10px;
-    color: $white;
   }
 }
 

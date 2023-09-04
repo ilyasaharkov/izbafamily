@@ -32,15 +32,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_variables.scss";
+@import "/src/assets/scss/_mixin.scss";
+.our-couples__title {
+  @include title()
+}
   @media screen and (min-width: 340px) {
     .our-couples {
       margin: 40px 0;
-    }
-    .our-couples__title {
-      font-size: 26px;
-      font-weight: 600;
-      margin: 0 0 10px 0;
-      color: $black;
     }
     .our-couples__subtitle, .our-couples__offer {
       font-size: 14px;
@@ -68,10 +66,6 @@ export default {
     }
   }
   @media screen and (min-width: 1200px) {
-    .our-couples__title {
-      font-size: 36px;
-      margin: 0 0 20px 0;
-    }
     .our-couples__subtitle {
       font-size: 18px;
       margin: 0 0 20px 0;
