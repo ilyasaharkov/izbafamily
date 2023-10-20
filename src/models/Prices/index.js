@@ -1,6 +1,6 @@
-import free_icon from '../../assets/images/Prices/free.png'
-import escort_icon from '../../assets/images/Prices/escort.png'
-import vip_icon from '../../assets/images/Prices/vip.png'
+import free_icon from '../../assets/images/Prices/free.webp'
+import escort_icon from '../../assets/images/Prices/escort.webp'
+import vip_icon from '../../assets/images/Prices/vip.webp'
 
 export const pricesModel = {
     title: 'Тарифы',

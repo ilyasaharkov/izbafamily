@@ -6,7 +6,7 @@
     </div>
     <div class="prices-card__bottom">
       <div class="prices-card__offer--info" v-for="offer in item.offers" :key="offer">
-        <img class="prices-card__icon" src="@/assets/images/check.png" alt="icon">
+        <img class="prices-card__icon" src="@/assets/images/check.webp" alt="icon">
         <p class="prices-card__offer">{{ offer.title }}</p>
       </div>
     </div>

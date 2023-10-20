@@ -1,4 +1,4 @@
-import image_bg from "/src/assets/images/Hero/hero-bg.jpeg";
+import image_bg from "/src/assets/images/Hero/hero-bg.webp";
 
 export const heroModel = {
   title: `Нужна семейная пара? <br> Обращайтесь к нам!`,

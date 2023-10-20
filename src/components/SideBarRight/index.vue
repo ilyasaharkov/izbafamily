@@ -3,7 +3,7 @@
     <div class="header__menu--mobile">
       <div class="header__menu--mobile__wrapper" :style="`height: ${height}px`">
         <div class="header__menu--mobile__close" @click="changeSideBarRightObject">
-          <img src="@/assets/images/close.png"/>
+          <img src="@/assets/images/close.webp"/>
         </div>
         <div class="header__menu--mobile__items">
           <img class="header__menu--mobile__logo" :src="headerViewObject.icon" alt="Логотип">

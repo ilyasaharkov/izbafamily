@@ -1,6 +1,6 @@
-import icon_info from '../../assets/images/Contacts/info.png'
-import icon_phone from '../../assets/images/Contacts/phone.png'
-import icon_clock from '../../assets/images/Contacts/clock.png'
+import icon_info from '../../assets/images/Contacts/info.webp'
+import icon_phone from '../../assets/images/Contacts/phone.webp'
+import icon_clock from '../../assets/images/Contacts/clock.webp'
 
 export const checkingCouplesModel = {
     title: 'Проверка семейных пар',

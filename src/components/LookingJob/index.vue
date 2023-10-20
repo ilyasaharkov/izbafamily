@@ -8,7 +8,7 @@
             v-for="item in lookingJobModelViewObject.info"
             :key="item.id"
             class="looking-job__block" >
-          <img class="looking-job__block--icon" src="@/assets/images/check.png" alt="Характеристика">
+          <img class="looking-job__block--icon" src="@/assets/images/check.webp" alt="Характеристика">
           <p class="looking-job__block--title">{{ item.title }}</p>
         </div>
       </div>
