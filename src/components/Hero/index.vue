@@ -70,6 +70,7 @@ export default {
     background-repeat: no-repeat;
     padding: 40px 0 20px 0;
     transition: all 3ms ease;
+    margin: 20px 0
   }
   .hero-layout {
     position: absolute;
@@ -131,6 +132,7 @@ export default {
     background-repeat: no-repeat;
     padding: 40px 0 20px 0;
     transition: all 0.03s ease;
+    margin: 30px 0;
   }
   .hero-layout {
     position: absolute;
@@ -191,6 +193,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     padding: 60px 0 40px 0;
+    margin: 40px 0;
   }
   .hero-layout {
     position: absolute;

@@ -39,5 +39,8 @@ export default {
       outline: 1px solid $f15c63;
       transition: all 0.3s ease;
     }
+    .form-input__block {
+      flex: 1;
+    }
   }
 </style>

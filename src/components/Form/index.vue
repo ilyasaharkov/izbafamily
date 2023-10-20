@@ -1,9 +1,10 @@
 <template>
-  <section class="form" id="request">
+  <section class="form" :id="id">
     <div class="container-wrapper">
       <div class="form-layout">
-        <h3 class="form-title">Оставьте заявку на подбор семейной пары</h3>
-        <form class="form-wrapper">
+        <h3 class="form-title">{{ title }}</h3>
+        <p class="form-subtitle">{{ subtitle }}</p>
+        <form class="form-wrapper" :style="`flex-direction: ${flexDirection}`">
           <SchemaFields :schema-form="callBackFormViewObject.fields" />
           <button class="form-button"> {{ callBackFormViewObject.button }} </button>
         </form>
@@ -18,6 +19,24 @@ import SchemaFields from "@/components/Universal/SchemaFields";
 
 export default {
   name: "index",
+  props: {
+    title: {
+      type: String,
+      default: 'Оставьте заявку на подбор семейной пары'
+    },
+    subtitle: {
+      type: String,
+      default: ''
+    },
+    id: {
+      type: String,
+      default: ''
+    },
+    flexDirection: {
+      type: String,
+      default: ''
+    }
+  },
   components: { SchemaFields },
   setup() {
     return { callBackFormViewObject }
@@ -32,15 +51,17 @@ export default {
   @include button
 }
 @media screen and (min-width: 340px) {
-  .form {
-    margin: 20px 0;
-  }
   .form-layout {
     padding: 20px 20px;
   }
   .form-title {
     font-weight: 600;
     font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+  .form-subtitle {
+    font-weight: 500;
+    font-size: 20px;
     margin: 0 0 20px 0;
   }
   .form-wrapper {
@@ -51,9 +72,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  .form {
-    margin: 30px 0;
-  }
   .form-layout {
     padding: 30px 20px;
   }
@@ -71,10 +89,6 @@ export default {
 }
 
 @media screen and (min-width: 1200px) {
-  .form {
-    margin: 40px 0;
-
-  }
   .form-layout {
     padding: 50px 40px;
   }
@@ -83,8 +97,9 @@ export default {
     margin: 0 0 30px 0;
   }
   .form-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    display: flex;
   }
 }
 </style>
