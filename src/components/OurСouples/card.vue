@@ -1,19 +1,17 @@
 <template>
-  <div class="our-couples__card" >
-    <div>
-      <img
+  <div class="our-couples__card">
+      <div
           class="our-couples__card--image"
-          :src="item.image"
-          :alt="item.title">
+          :style="`background-image: url(${item.image})`"
+      />
       <div class="our-couples__card--layout">
         <p class="our-couples__card--title">{{ item.title }}</p>
         <p class="our-couples__card--description">{{ item.description }}</p>
       </div>
-    </div>
     <button class="our-couples__card--button">
       {{ button }}
     </button>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -58,9 +56,11 @@ export default {
      border-top-left-radius: 20px;
      border-top-right-radius: 20px;
      margin: 0 0 10px 0;
-     height: 200px;
+     height: 300px;
      width: 100%;
-     object-fit: cover;
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: cover;
    }
    .our-couples__card--title {
      margin: 0 0 5px 0;
