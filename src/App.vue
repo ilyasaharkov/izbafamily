@@ -13,6 +13,7 @@
     <LookingJob />
     <Footer />
     <SideBarRight />
+    <ModalFormWrapper />
   </div>
 </template>
 
@@ -28,6 +29,7 @@ import Reviews from '../src/components/Reviews/index.vue'
 import LookingJob from '../src/components/LookingJob/index.vue'
 import Footer from "../src/components/Footer/index.vue";
 import SideBarRight from "../src/components/SideBarRight/index.vue";
+import ModalFormWrapper from "../src/components/Form/Modal/WrapperForm.vue";
 export default {
   name: "App",
   components: {
@@ -41,7 +43,8 @@ export default {
     Prices,
     Reviews,
     LookingJob,
-    Footer
+    Footer,
+    ModalFormWrapper
   },
 };
 </script>

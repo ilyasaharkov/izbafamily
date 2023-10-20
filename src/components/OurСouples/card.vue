@@ -8,13 +8,17 @@
         <p class="our-couples__card--title">{{ item.title }}</p>
         <p class="our-couples__card--description">{{ item.description }}</p>
       </div>
-    <button class="our-couples__card--button">
+    <button
+        class="our-couples__card--button"
+        @click.stop="changeStatusForm"
+    >
       {{ button }}
     </button>
     </div>
 </template>
 
 <script>
+import { changeStatusForm } from '@/viewModels/Form/Modal/index.js'
 export default {
   name: "card",
   props: {
@@ -25,6 +29,11 @@ export default {
     button: {
       type: String,
       default: ''
+    }
+  },
+  setup() {
+    return {
+      changeStatusForm
     }
   }
 }
