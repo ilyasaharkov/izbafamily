@@ -1,7 +1,7 @@
 import slide_1 from '/src/assets/images/Reviews/slide_1.jpg'
 
 export const reviewsModel = {
-    title: 'Отзывы о нас',
+    title: 'Отзывы о нас todo slider',
     cards: [
         {
             id: 0,

@@ -44,6 +44,7 @@ export default {
   background-color: $white!important;
   color: $black!important;
   border: 1px solid $f15c63!important;
+  width: 100%;
   &:hover {
     background-color: $f15c63!important;
     color: $white!important;
@@ -95,7 +96,7 @@ export default {
     }
     .our-couples__card--wrapper {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
   }

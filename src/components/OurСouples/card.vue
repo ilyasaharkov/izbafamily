@@ -1,16 +1,18 @@
 <template>
   <div class="our-couples__card" >
-    <img
-        class="our-couples__card--image"
-        :src="item.image"
-        :alt="item.title">
-    <div class="our-couples__card--layout">
-      <p class="our-couples__card--title">{{ item.title }}</p>
-      <p class="our-couples__card--description">{{ item.description }}</p>
-      <button class="our-couples__card--button">
-        {{ button }}
-      </button>
+    <div>
+      <img
+          class="our-couples__card--image"
+          :src="item.image"
+          :alt="item.title">
+      <div class="our-couples__card--layout">
+        <p class="our-couples__card--title">{{ item.title }}</p>
+        <p class="our-couples__card--description">{{ item.description }}</p>
+      </div>
     </div>
+    <button class="our-couples__card--button">
+      {{ button }}
+    </button>
   </div>
 </template>
 
@@ -42,14 +44,23 @@ export default {
      background: $white;
      padding: 0 0 20px 0;
      border-radius: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
    }
    .our-couples__card--layout {
      padding: 15px 15px 0 15px;
+   }
+   .our-couples__card--button {
+     margin: 25px 15px 0 15px;
    }
    .our-couples__card--image {
      border-top-left-radius: 20px;
      border-top-right-radius: 20px;
      margin: 0 0 10px 0;
+     height: 200px;
+     width: 100%;
+     object-fit: cover;
    }
    .our-couples__card--title {
      margin: 0 0 5px 0;
