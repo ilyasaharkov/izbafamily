@@ -55,5 +55,5 @@ export const ourCouplesModel = {
         }
     ],
     button: 'Хочу их контакты',
-    more: 'Загрузить еще'
+    more: 'Показать еще'
 }

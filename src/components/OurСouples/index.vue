@@ -7,27 +7,42 @@
       <div class="our-couples__card--block">
         <div class="our-couples__card--wrapper">
           <OurCouplesCard
-              v-for="card in ourCouplesModelViewObject.cards"
+              v-for="card in listCard"
               :key="card.id"
               :item="card"
               :button="ourCouplesModelViewObject.button"
           />
         </div>
-        <button class="our-couples__card--more"> {{ ourCouplesModelViewObject.more }}</button>
+        <button v-show="!checkLastItemInListCard" class="our-couples__card--more" @click.stop="loadMoreCards"> {{ ourCouplesModelViewObject.more }}</button>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { ourCouplesModelViewObject } from "@/viewModels/OurСouples";
+import {
+  ourCouplesModelViewObject,
+  checkLastItemInListCard,
+  listCard,
+  getFirstListCard,
+  loadMoreCards
+} from "@/viewModels/OurСouples";
 import OurCouplesCard from './card'
+import {
+  onMounted
+} from "vue";
 export default {
   name: "index",
   components: { OurCouplesCard },
   setup() {
+
+    onMounted(() => getFirstListCard())
+
     return {
-      ourCouplesModelViewObject
+      checkLastItemInListCard,
+      ourCouplesModelViewObject,
+      listCard,
+      loadMoreCards
     }
   }
 }
@@ -45,9 +60,11 @@ export default {
   color: $black!important;
   border: 1px solid $f15c63!important;
   width: 100%;
-  &:hover {
-    background-color: $f15c63!important;
-    color: $white!important;
+  @media screen and (min-width: 1200px) {
+    &:hover {
+      background-color: $f15c63!important;
+      color: $white!important;
+    }
   }
 }
   @media screen and (min-width: 340px) {
