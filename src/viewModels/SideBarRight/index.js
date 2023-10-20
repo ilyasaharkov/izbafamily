@@ -4,6 +4,8 @@ import { sideBarRight } from "../../models/SideBarRight/";
 const sideBarRightObject = ref(sideBarRight);
 
 const changeSideBarRightObject = () => {
+  // Запрещаем прокрутку
+  sideBarRightObject.value.status ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden'
   sideBarRightObject.value.status = !sideBarRightObject.value.status;
 };
 
