@@ -1,5 +1,5 @@
 <template>
-  <section class="looking-job">
+  <section class="looking-job" id="work">
     <div class="container">
       <h3 class="looking-job__title">{{ lookingJobModelViewObject.title }}</h3>
       <p class="looking-job__subtitle">{{ lookingJobModelViewObject.subtitle }}</p>

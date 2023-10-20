@@ -1,5 +1,5 @@
 <template>
-  <div class="container-wrapper">
+  <div class="container-wrapper" id="reviews">
     <section class="reviews">
       <Slider>
         <template #content>

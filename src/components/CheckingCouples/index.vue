@@ -1,5 +1,5 @@
 <template>
-  <div class="checking-couples">
+  <div class="checking-couples" id="safety">
     <div class="container">
       <h2 class="checking-couples__title">
         {{ checkingCouplesModelViewObject.title }}

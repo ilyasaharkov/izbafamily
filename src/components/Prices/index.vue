@@ -1,5 +1,5 @@
 <template>
-  <section class="prices">
+  <section class="prices" id="price">
     <div class="container">
       <h3 class="prices-tittle">{{ pricesModelViewObject.title }}</h3>
       <div class="prices-card__wrapper">

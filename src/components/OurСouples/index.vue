@@ -1,5 +1,5 @@
 <template>
-  <section class="our-couples">
+  <section class="our-couples" id="family">
     <div class="container">
       <h2 class="our-couples__title">{{ ourCouplesModelViewObject.title }}</h2>
       <h3 class="our-couples__subtitle">{{ ourCouplesModelViewObject.subtitle }}</h3>

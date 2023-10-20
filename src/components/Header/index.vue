@@ -11,6 +11,7 @@
           <button
             v-for="link in headerViewObject.menu"
             :key="link.id"
+            @click="scrollToElementToID(link.code)"
             class="header-wrapper__link"
           >
             {{ link.name }}
@@ -37,14 +38,16 @@
 </template>
 
 <script>
-import { headerViewObject } from "../../viewModels/Header/";
-import { changeSideBarRightObject } from "../../viewModels/SideBarRight/";
+import { headerViewObject } from "@/viewModels/Header/";
+import { changeSideBarRightObject } from "@/viewModels/SideBarRight/";
+import { scrollToElementToID } from '@/utils/ScrollToElement/index'
 export default {
   name: "Header",
   setup() {
     return {
       headerViewObject,
       changeSideBarRightObject,
+      scrollToElementToID
     };
   },
 };
