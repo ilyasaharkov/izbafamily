@@ -8,7 +8,7 @@
       <div class="hero-wrapper">
         <h1 class="hero__title" v-html="heroViewObject.title" />
         <p class="hero__description">{{ heroViewObject.description }}</p>
-        <button class="hero__button">{{ heroViewObject.button }}</button>
+        <button class="hero__button" @click="scrollToElementToID('request')">{{ heroViewObject.button }}</button>
         <div class="hero-offers__wrapper">
           <div
             v-for="item in heroViewObject.offers"
@@ -43,10 +43,14 @@
 </template>
 
 <script>
-import { heroViewObject } from "../../viewModels/Hero/";
+import { heroViewObject } from "@/viewModels/Hero/";
+import { scrollToElementToID } from '@/utils/ScrollToElement/index'
 export default {
   setup() {
-    return { heroViewObject };
+    return {
+      heroViewObject,
+      scrollToElementToID
+    };
   },
 };
 </script>
