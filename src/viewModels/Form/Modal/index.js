@@ -1,9 +1,26 @@
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const statusModalForm = ref(false)
+const data = ref({})
+const objectData = ref({})
+
+const initFormModal = ($data) => {
+    data.value = $data
+    changeStatusForm()
+}
+
+watch(() => data.value, (newValue) => {
+    objectData.value = newValue
+}, { deep: true })
+
 
 const changeStatusForm = () => {
-    statusModalForm.value ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden'
+    if (statusModalForm.value) {
+        document.body.style.overflow = 'auto'
+        objectData.value = {}
+    } else {
+        document.body.style.overflow = 'hidden'
+    }
     statusModalForm.value = !statusModalForm.value
 }
 
@@ -13,6 +30,7 @@ const listenerClick = (event) => {
 
 export {
     listenerClick,
-    changeStatusForm,
+    initFormModal,
+    objectData,
     statusModalForm
 }

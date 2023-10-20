@@ -1,14 +1,14 @@
 <template>
   <section v-show="statusModalForm" class="modal-form">
     <div class="modal-form__content">
-      TODO FORM
+      {{ objectData }}
     </div>
   </section>
 </template>
 
 <script>
-import { statusModalForm, listenerClick } from '@/viewModels/Form/Modal/index.js'
-import {onBeforeUnmount, onMounted} from "vue";
+import { statusModalForm, listenerClick, objectData } from '@/viewModels/Form/Modal/index.js'
+import { onBeforeUnmount, onMounted } from "vue";
 export default {
   name: "WrapperForm",
   setup () {
@@ -21,7 +21,7 @@ export default {
       document.removeEventListener('click', () => listenerClick())
     })
 
-    return { statusModalForm }
+    return { statusModalForm, objectData }
   }
 }
 </script>

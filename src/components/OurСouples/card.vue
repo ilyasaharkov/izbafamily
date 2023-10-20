@@ -10,7 +10,7 @@
       </div>
     <button
         class="our-couples__card--button"
-        @click.stop="changeStatusForm"
+        @click.stop="initFormModal(item)"
     >
       {{ button }}
     </button>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { changeStatusForm } from '@/viewModels/Form/Modal/index.js'
+import { initFormModal } from '@/viewModels/Form/Modal/index.js'
 export default {
   name: "card",
   props: {
@@ -33,7 +33,7 @@ export default {
   },
   setup() {
     return {
-      changeStatusForm
+      initFormModal
     }
   }
 }
