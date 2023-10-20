@@ -2,6 +2,7 @@ import logo from "../../assets/images/logo.webp";
 
 export const headerObject = {
   icon: logo,
+  id: 'header',
   menu: [
     { id: 0, name: "Семейные пары", active: false, code: 'family' },
     { id: 1, name: "Безопасность", active: false, code: 'safety' },

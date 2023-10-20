@@ -1,10 +1,11 @@
 <template>
-  <header class="header">
+  <header class="header" id="header">
     <div class="container">
       <div class="header-wrapper">
         <img
           class="header-wrapper__logo"
           :src="headerViewObject.icon"
+          @click.stop="scrollToElementToID(headerViewObject.id, 9999)"
           alt="logo"
         />
         <div class="header-wrapper__links">
@@ -80,6 +81,7 @@ export default {
   .header-wrapper__logo {
     width: 75px;
     height: 60px;
+    cursor: pointer;
   }
   .header-wrapper__links {
     display: none;

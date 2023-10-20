@@ -12,6 +12,7 @@
                 v-for="item in headerViewObject.menu"
                 :key="item.id"
                 class="header__menu--mobile__item"
+                @click.stop="toScrollElementMobile(item.code)"
             >{{ item.name }}</button>
           </div>
           <a
@@ -28,6 +29,7 @@
 
 <script>
 import {onMounted, ref} from 'vue'
+import { scrollToElementToID } from '@/utils/ScrollToElement/index'
 import {
   sideBarRightObject,
   changeSideBarRightObject,
@@ -38,6 +40,11 @@ export default {
   setup() {
     const height = ref()
 
+    const toScrollElementMobile = (code) => {
+      scrollToElementToID(code)
+      changeSideBarRightObject()
+    }
+
     onMounted(() => {
       height.value = getHeightClient()
     })
@@ -46,6 +53,7 @@ export default {
       sideBarRightObject,
       headerViewObject,
       changeSideBarRightObject,
+      toScrollElementMobile,
       height
     };
   },
