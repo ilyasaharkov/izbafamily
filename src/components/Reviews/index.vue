@@ -1,5 +1,5 @@
 <template>
-  <div class="container-wrapper" style="margin: 0 auto 100px auto">
+  <div class="container-wrapper">
     <section class="reviews">
       <h3 class="reviews__title">
         {{ reviewsModelViewObject.title }}
@@ -11,7 +11,6 @@
             :item="item"
         />
       </div>
-      <button class="reviews__button">{{ reviewsModelViewObject.button }}</button>
     </section>
   </div>
 </template>
@@ -40,6 +39,10 @@ export default {
 
 .reviews__title {
   @include title()
+}
+
+.container-wrapper {
+  margin: 0 auto 100px auto
 }
 
 @media screen and (min-width: 340px) {

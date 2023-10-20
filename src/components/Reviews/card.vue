@@ -3,7 +3,7 @@
     <div class="reviews-card__top">
       <img class="reviews-card__image" :src="item.image" :alt="item.name">
       <div>
-        <p class="reviews-card__date">{{ item.date }}</p>
+<!--        <p class="reviews-card__date">{{ item.date }}</p>-->
         <p class="reviews-card__name">{{ item.name }}</p>
       </div>
     </div>
