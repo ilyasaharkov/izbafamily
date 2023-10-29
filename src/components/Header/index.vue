@@ -12,7 +12,7 @@
           <button
             v-for="link in headerViewObject.menu"
             :key="link.id"
-            @click="scrollToElementToID(link.code)"
+            @click="link.link ? goToLink(link.code) : scrollToElementToID(link.code)"
             class="header-wrapper__link"
           >
             {{ link.name }}
@@ -41,14 +41,16 @@
 <script>
 import { headerViewObject } from "@/viewModels/Header/";
 import { changeSideBarRightObject } from "@/viewModels/SideBarRight/";
-import { scrollToElementToID } from '@/utils/ScrollToElement/index'
+import { scrollToElementToID } from '@/utils/ScrollToElement/index.js'
+import { goToLink } from '@/utils/GoToNewLink/index.js'
 export default {
   name: "Header",
   setup() {
     return {
       headerViewObject,
       changeSideBarRightObject,
-      scrollToElementToID
+      scrollToElementToID,
+      goToLink
     };
   },
 };

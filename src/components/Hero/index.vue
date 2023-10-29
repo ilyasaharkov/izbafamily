@@ -6,7 +6,7 @@
     <div class="hero-layout" />
     <div class="container">
       <div class="hero-wrapper">
-        <h1 class="hero__title" v-html="heroViewObject.title" />
+        <h1 v-if="heroViewObject.title" class="hero__title" v-html="heroViewObject.title" />
         <p class="hero__description">{{ heroViewObject.description }}</p>
         <button class="hero__button" @click="scrollToElementToID('request')">{{ heroViewObject.button }}</button>
         <div class="hero-offers__wrapper">
@@ -70,7 +70,6 @@ export default {
     background-repeat: no-repeat;
     padding: 40px 0 20px 0;
     transition: all 3ms ease;
-    margin: 20px 0
   }
   .hero-layout {
     position: absolute;
@@ -78,7 +77,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1;
   }
   .hero-wrapper {
@@ -114,7 +113,7 @@ export default {
   .hero-offers__block--top_title {
     font-size: 16px;
     font-weight: 600;
-    color: $white;
+    color: #f15c63;
     margin: 0;
   }
   .hero-offers__block--top_description {
@@ -132,7 +131,7 @@ export default {
     background-repeat: no-repeat;
     padding: 40px 0 20px 0;
     transition: all 0.03s ease;
-    margin: 30px 0;
+    margin:0 0 30px 0;
   }
   .hero-layout {
     position: absolute;
@@ -140,7 +139,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1;
   }
   .hero-wrapper {
@@ -176,7 +175,6 @@ export default {
   .hero-offers__block--top_title {
     font-size: 16px;
     font-weight: 600;
-    color: $white;
     margin: 0;
   }
   .hero-offers__block--top_description {
@@ -193,7 +191,6 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     padding: 60px 0 40px 0;
-    margin: 40px 0;
   }
   .hero-layout {
     position: absolute;
@@ -201,7 +198,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1;
   }
   .hero-wrapper {
@@ -236,7 +233,6 @@ export default {
   .hero-offers__block--top_title {
     font-size: 20px;
     font-weight: 600;
-    color: $white;
     margin: 0;
   }
   .hero-offers__block--top_description {

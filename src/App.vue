@@ -2,15 +2,17 @@
   <div class="app">
     <Header />
     <Hero />
-    <Form
-      id="request"
-    />
+    <Form id="request" />
     <OurСouples />
-    <Responsibilities />
-    <CheckingCouples />
+    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
+    <!--    <Responsibilities />-->
+    <!--    <CheckingCouples />-->
+    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <Prices />
     <Reviews />
-    <LookingJob />
+    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
+    <!--    <LookingJob />-->
+    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <Footer />
     <SideBarRight />
     <ModalFormWrapper />
