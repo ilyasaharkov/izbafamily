@@ -58,11 +58,11 @@ export default {
   @include buttonWidth();
   background-color: $white!important;
   color: $black!important;
-  border: 1px solid $f15c63!important;
+  border: 1px solid #198737!important;
   width: 100%;
   @media screen and (min-width: 1200px) {
     &:hover {
-      background-color: $f15c63!important;
+      background-color: #198737!important;
       color: $white!important;
     }
   }

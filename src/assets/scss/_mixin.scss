@@ -6,7 +6,7 @@
     padding: 16.5px 50px;
     border-radius: 10px;
     font-size: 14px;
-    background: $f15c63;
+    background: #198737;
     color: $white;
     font-weight: 400;
   }
@@ -15,13 +15,13 @@
     font-size: 14px;
   }
   @media screen and (min-width: 1200px) {
-    padding: 19.5px 45px;
+    padding: 19.5px 60px;
     border: none;
     font-size: 18px;
   }
   &:hover {
     background: $white;
-    outline: 1px solid $f15c63;
+    outline: 1px solid #198737;
     color: $black;
   }
 }
@@ -33,7 +33,7 @@
     padding: 16.5px 0;
     border-radius: 10px;
     font-size: 14px;
-    background: $f15c63;
+    background: #198737;
     color: $white;
     font-weight: 500;
   }
@@ -48,12 +48,13 @@
   }
   &:hover {
     background: $white;
-    outline: 1px solid $f15c63;
+    outline: 1px solid #198737;
     color: $black;
   }
 }
 
 @mixin title() {
+  font-weight: 600;
   @media screen and (min-width: 340px) {
     font-size: 30px;
     margin: 0 0 10px 0;

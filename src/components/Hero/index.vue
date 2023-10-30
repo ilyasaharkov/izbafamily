@@ -15,24 +15,14 @@
             class="hero-offers__block"
           >
             <div class="hero-offers__block--top">
-              <svg
-                class="t997__checkmark"
-                style="width: 20px; height: 20px"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM9.70711 13.2071L15.2071 7.70711L13.7929 6.29289L9 11.0858L6.20711 8.29289L4.79289 9.70711L8.29289 13.2071L9 13.9142L9.70711 13.2071Z"
-                  fill="#ffffff"
-                ></path>
-              </svg>
-              <p class="hero-offers__block--top_title">{{ item.title }}</p>
+              <img class="hero-offers__block--top__image" src="@/assets/images/Hero/success.webp" alt="Проверено">
+              <div class="hero-offers__block--top__wrapper">
+                <p class="hero-offers__block--top_title">{{ item.title }}</p>
+                <p class="hero-offers__block--top_description">
+                  {{ item.subtitle }}
+                </p>
+              </div>
             </div>
-            <p class="hero-offers__block--top_description">
-              {{ item.subtitle }}
-            </p>
           </div>
         </div>
         <button class="hero__button" @click="scrollToElementToID('request')">{{ heroViewObject.button }}</button>
@@ -91,7 +81,7 @@ export default {
     font-size: 30px;
     color: white;
     margin: 0 0 20px 0;
-    line-height: 140%;
+    line-height: 110%;
   }
   .hero__description {
     font-size: 14px;
@@ -103,27 +93,36 @@ export default {
   .hero-offers__wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    column-gap: 30px;
-    row-gap: 25px;
+    gap: 20px;
     margin: 40px 0 30px 0;
   }
   .hero-offers__block--top {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 10px;
-    margin: 0 0 10px 0;
+  }
+  .hero-offers__block--top__image {
+    width: 32px;
+    height: 32px;
   }
   .hero-offers__block--top_title {
     font-size: 16px;
     font-weight: 600;
-    color: #f15c63;
+    color: white;
     margin: 0;
   }
   .hero-offers__block--top_description {
-    font-size: 14px;
-    font-weight: 500;
-    color: $white;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 140%;
+    color: #fafafa;
     margin: 0;
+    opacity: 0.7;
+  }
+  .hero-offers__block--top__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -168,13 +167,10 @@ export default {
   .hero-offers__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 25px;
     margin: 40px 0;
   }
   .hero-offers__block--top {
     display: flex;
-    align-items: center;
     column-gap: 10px;
     margin: 0 0 10px 0;
   }
@@ -226,13 +222,10 @@ export default {
   .hero-offers__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 30px;
-    row-gap: 25px;
     margin: 60px 0 40px 0;
   }
   .hero-offers__block--top {
     display: flex;
-    align-items: center;
     column-gap: 10px;
     margin: 0 0 10px 0;
   }

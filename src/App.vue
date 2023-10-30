@@ -4,18 +4,20 @@
     <Hero />
     <Form id="request" />
     <OurСouples />
+    <StepsWork />
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <!--    <Responsibilities />-->
+<!--        <Responsibilities />-->
     <!--    <CheckingCouples />-->
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <Prices />
+    <!-- TODO ПОКА УБИРАЕМ   -->
+    <!--    <Prices />-->
     <Reviews />
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <!--    <LookingJob />-->
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <Footer />
     <SideBarRight />
-    <ModalFormWrapper />
+<!--    <ModalFormWrapper />-->
   </div>
 </template>
 
@@ -29,9 +31,9 @@ import CheckingCouples from '../src/components/CheckingCouples/index.vue'
 import Prices from '../src/components/Prices/index.vue'
 import Reviews from '../src/components/Reviews/index.vue'
 import LookingJob from '../src/components/LookingJob/index.vue'
+import StepsWork from '../src/components/StepsWork/index.vue'
 import Footer from "../src/components/Footer/index.vue";
 import SideBarRight from "../src/components/SideBarRight/index.vue";
-import ModalFormWrapper from "../src/components/Form/Modal/WrapperForm.vue";
 export default {
   name: "App",
   components: {
@@ -40,13 +42,13 @@ export default {
     SideBarRight,
     Form,
     OurСouples,
+    StepsWork,
     Responsibilities,
     CheckingCouples,
     Prices,
     Reviews,
     LookingJob,
-    Footer,
-    ModalFormWrapper
+    Footer
   },
 };
 </script>
