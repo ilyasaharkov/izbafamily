@@ -19,7 +19,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .steps-work {
-    margin: 0 0 40px 0;
+  @media screen and (min-width: 340px) {
+    .steps-work {
+      margin: 0 0 20px 0;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .steps-work {
+      margin: 0 0 40px 0;
+    }
   }
 </style>

@@ -54,13 +54,13 @@ export default {
 @media screen and (min-width: 340px) {
   .reviews {
     padding: 20px 10px 20px 10px;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews {
     padding: 40px 30px 60px 30px;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 40px auto;
   }
 }
 

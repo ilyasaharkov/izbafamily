@@ -45,7 +45,7 @@ export default {
 }
 @media screen and (min-width: 340px) {
   .checking-couples {
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
   }
   .checking-couples__subtitle {
     font-size: 16px;
@@ -93,7 +93,7 @@ export default {
 
 @media screen and (min-width: 992px) {
   .checking-couples {
-    margin: 0 0 60px 0;
+    margin: 40px 0 40px 0;
   }
   .checking-couples__subtitle {
     font-size: 18px;
