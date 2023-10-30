@@ -7,8 +7,7 @@
     <div class="container">
       <div class="hero-wrapper">
         <h1 v-if="heroViewObject.title" class="hero__title" v-html="heroViewObject.title" />
-        <p class="hero__description">{{ heroViewObject.description }}</p>
-        <button class="hero__button" @click="scrollToElementToID('request')">{{ heroViewObject.button }}</button>
+        <p v-if="heroViewObject.description " class="hero__description">{{ heroViewObject.description }}</p>
         <div class="hero-offers__wrapper">
           <div
             v-for="item in heroViewObject.offers"
@@ -34,9 +33,9 @@
             <p class="hero-offers__block--top_description">
               {{ item.subtitle }}
             </p>
-            <p></p>
           </div>
         </div>
+        <button class="hero__button" @click="scrollToElementToID('request')">{{ heroViewObject.button }}</button>
       </div>
     </div>
   </header>
@@ -69,7 +68,11 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     padding: 40px 0 20px 0;
+    margin: 0 0 30px 0;
     transition: all 3ms ease;
+  }
+  .hero__button {
+    width: 100%;
   }
   .hero-layout {
     position: absolute;
@@ -102,7 +105,7 @@ export default {
     grid-template-columns: repeat(1, 1fr);
     column-gap: 30px;
     row-gap: 25px;
-    margin: 40px 0 0 0;
+    margin: 40px 0 30px 0;
   }
   .hero-offers__block--top {
     display: flex;
@@ -132,6 +135,9 @@ export default {
     padding: 40px 0 20px 0;
     transition: all 0.03s ease;
     margin:0 0 30px 0;
+  }
+  .hero__button {
+    width: auto;
   }
   .hero-layout {
     position: absolute;
@@ -164,7 +170,7 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 25px;
-    margin: 40px 0 0 0;
+    margin: 40px 0;
   }
   .hero-offers__block--top {
     display: flex;
@@ -222,7 +228,7 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 30px;
     row-gap: 25px;
-    margin: 60px 0 0 0;
+    margin: 60px 0 40px 0;
   }
   .hero-offers__block--top {
     display: flex;
