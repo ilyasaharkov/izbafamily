@@ -3,8 +3,9 @@
     <Header />
     <Hero />
     <Form id="request" />
-    <OurСouples />
+    <CheckingCouples />
     <StepsWork />
+    <OurСouples />
     <Form
         id="middle"
         title="Оставьте заявку нашему менеджеру"
@@ -13,7 +14,6 @@
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <!--        <Responsibilities />-->
     <Offers/>
-    <CheckingCouples />
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <!-- TODO ПОКА УБИРАЕМ   -->
     <!--    <Prices />-->
