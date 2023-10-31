@@ -10,7 +10,6 @@
       </div>
     <button
         class="our-couples__card--button"
-        @click.stop="initFormModal(item)"
     >
       {{ button }}
     </button>
@@ -28,11 +27,6 @@ export default {
     button: {
       type: String,
       default: ''
-    }
-  },
-  setup() {
-    return {
-      initFormModal
     }
   }
 }

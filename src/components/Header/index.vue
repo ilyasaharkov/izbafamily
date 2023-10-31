@@ -93,10 +93,11 @@ export default {
     border: none;
     background: none;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
     &:hover {
       transition: all 0.3s ease-in-out;
-      color: $f15c63;
+      color: #198737;
     }
   }
   .header-wrapper__contacts--links {
@@ -142,17 +143,6 @@ export default {
   }
   .header-wrapper__links {
     display: none;
-  }
-  .header-wrapper__link {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 14px;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      color: $f15c63;
-    }
   }
   .header-wrapper__contacts--links {
     display: none;
@@ -204,17 +194,6 @@ export default {
   .header-wrapper__links {
     column-gap: 20px;
   }
-  .header-wrapper__link {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 14px;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      color: $f15c63;
-    }
-  }
   .header-wrapper__contacts--links {
     display: block;
     text-decoration: none;
@@ -246,19 +225,9 @@ export default {
   .header-wrapper__links {
     column-gap: 20px;
   }
-  .header-wrapper__link {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      color: $f15c63;
-    }
-  }
   .header-wrapper__contacts--links {
     text-decoration: none;
-    color: $white-blue;
+    color: #198737;
   }
 }
 </style>

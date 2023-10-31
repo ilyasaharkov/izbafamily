@@ -42,7 +42,7 @@ const checkValidForm = () => {
     // Длина 16
     callBackFormViewObject.fields.forEach((item) => {
         if (item.code === 'phone') {
-            if (item.answer.length === 16) {
+            if (item.answer.length === 18) {
                 item.error.status = false
             } else {
                 item.error.status = true
