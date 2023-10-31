@@ -1,5 +1,5 @@
 <template>
-  <section class="steps-work">
+  <section class="steps-work" id="steps">
     <div class="container">
       <Block :item="stepsWork" />
     </div>

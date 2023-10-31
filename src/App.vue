@@ -27,7 +27,6 @@
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <Footer />
     <SideBarRight />
-<!--    <ModalFormWrapper />-->
   </div>
 </template>
 

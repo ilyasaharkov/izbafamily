@@ -4,7 +4,11 @@
       <div class="form-layout">
         <h3 class="form-title">{{ title }}</h3>
         <p class="form-subtitle">{{ subtitle }}</p>
-        <form class="form-wrapper" :style="`flex-direction: ${flexDirection}`">
+        <form
+            @submit.prevent="sendDataForm(id)"
+            class="form-wrapper"
+            :style="`flex-direction: ${flexDirection}`"
+        >
           <SchemaFields :schema-form="callBackFormViewObject.fields" />
           <button class="form-button"> {{ callBackFormViewObject.button }} </button>
         </form>
@@ -14,7 +18,10 @@
 </template>
 
 <script>
-import { callBackFormViewObject } from "@/viewModels/Forms";
+import {
+  callBackFormViewObject,
+  sendDataForm
+  } from "@/viewModels/Forms";
 import SchemaFields from "@/components/Universal/SchemaFields";
 
 export default {
@@ -39,7 +46,10 @@ export default {
   },
   components: { SchemaFields },
   setup() {
-    return { callBackFormViewObject }
+    return {
+      callBackFormViewObject,
+      sendDataForm
+    }
   }
 }
 </script>

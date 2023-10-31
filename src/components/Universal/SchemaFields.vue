@@ -4,6 +4,7 @@
       :key="item.id"
       class="form-input__block">
     <input
+        v-model="item.answer"
         class="form-input"
         :placeholder="item.placeholder"
     >

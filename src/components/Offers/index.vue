@@ -1,5 +1,5 @@
 <template>
-  <section class="offers">
+  <section class="offers" id="offers">
     <div class="container">
       <Block :item="offers" />
     </div>
