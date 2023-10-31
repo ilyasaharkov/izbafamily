@@ -4,6 +4,15 @@
       :key="item.id"
       class="form-input__block">
     <input
+        v-if="item.code === 'phone'"
+        v-model="item.answer"
+        class="form-input"
+        v-maska
+        data-maska="+7 ### ###-##-##"
+        :placeholder="item.placeholder"
+    >
+    <input
+        v-else
         v-model="item.answer"
         class="form-input"
         :placeholder="item.placeholder"
@@ -12,12 +21,19 @@
 </template>
 
 <script>
+import { vMaska } from "maska"
+
 export default {
   name: "SchemaFields",
   props: {
     schemaForm: {
       type: Object,
       default: {}
+    }
+  },
+  setup() {
+    return {
+      vMaska
     }
   }
 }
