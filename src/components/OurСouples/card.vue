@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import { initFormModal } from '@/viewModels/Form/Modal/index.js'
 export default {
   name: "card",
   props: {

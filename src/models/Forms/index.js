@@ -5,7 +5,7 @@ export const callBack = {
             code: 'name',
             placeholder: 'Напишите имя',
             title: '',
-            error: { status: false, info: 'Поле имя не должно быть пустым' },
+            error: { status: false, info: '*Поле имя не должно быть пустым' },
             answer: ''
         },
         {
@@ -13,10 +13,11 @@ export const callBack = {
             code: 'phone',
             placeholder: 'Укажите номер телефона',
             title: '',
-            error: { status: false, info: 'Поле номера не должно быть пустым' },
+            error: { status: false, info: '*Введите весь номер телефона' },
             answer: ''
         },
     ],
+    status: false,
     button: 'Оставить заявку',
     data: {}
 }

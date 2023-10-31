@@ -1,7 +1,7 @@
 <template>
   <section class="form" :id="id">
     <div class="container-wrapper">
-      <div class="form-layout">
+      <div v-if="!callBackFormViewObject.status" class="form-layout">
         <h3 class="form-title">{{ title }}</h3>
         <p class="form-subtitle">{{ subtitle }}</p>
         <form
@@ -9,9 +9,13 @@
             class="form-wrapper"
             :style="`flex-direction: ${flexDirection}`"
         >
-          <SchemaFields :schema-form="callBackFormViewObject.fields" />
+          <SchemaFields  :schema-form="callBackFormViewObject.fields" />
           <button class="form-button"> {{ callBackFormViewObject.button }} </button>
         </form>
+      </div>
+      <div  class="form-layout" v-else>
+        <h3 class="form-title" style="text-align: center">Спасибо за заявку, форма успешно отправлена!</h3>
+        <p class="form-subtitle" style="text-align: center">С вами свяжется менеджер через 15 минут!</p>
       </div>
     </div>
   </section>

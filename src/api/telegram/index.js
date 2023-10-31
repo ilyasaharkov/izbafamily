@@ -4,7 +4,7 @@ const dictBots = {
 }
 const chatID = '-4008082861'
 
-export const tgBotSender = (targetBot, reportData) => {
+export const tgBotSender = async (targetBot, reportData) => {
     const selectBot = dictBots[targetBot]
     const sendPath = `https://api.telegram.org/bot${selectBot}/sendMessage`;
 
@@ -15,7 +15,7 @@ export const tgBotSender = (targetBot, reportData) => {
     };
 
     try {
-        fetch(sendPath, {
+        return fetch(sendPath, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json; charset=UTF-8'
@@ -24,13 +24,13 @@ export const tgBotSender = (targetBot, reportData) => {
         })
             .then((response) => {
                 if (response.ok) {
-                    console.log('[SUCCESS] TgBotSender: ', true);
+                   return true
                 } else {
-                    console.error('[ERROR] TgBotSender: ', response.status, response.statusText);
+                    return  [response.status, response.statusText];
                 }
             })
             .catch((error) => {
-                console.error('[ERROR] TgBotSender: ', error);
+                return error
             });
     } catch (error) {
         console.error("Ошибка при запуске telegram sender:", error);
