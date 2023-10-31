@@ -24,7 +24,7 @@ const sendDataForm = ($type) => {
 }
 
 const getFormatTextForTelegram = () => {
-    return (`✅ Новая заявка от клиента\n\nТип формы: ${data.type}\n\nИмя: ${data.name}\n\nНомер телефона: ${data.phone}`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
+    return (`-----------------------------------------\n\n✅ Новая заявка от клиента\n\nТип формы: ${data.type}\n\nИмя: ${data.name}\n\nНомер телефона: ${data.phone}\n\n-----------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
 }
 
 export {
