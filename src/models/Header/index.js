@@ -1,4 +1,5 @@
 import logo from "../../assets/images/logo.webp";
+import icon_phone from '../../assets/images/Contacts/phone.webp'
 
 export const headerObject = {
   icon: logo,
@@ -10,5 +11,5 @@ export const headerObject = {
     { id: 2, name: "Отзывы", active: false, code: 'reviews', link: false },
     // { id: 4, name: "Хочу у вас работать", active: false, code: '/vacancy/', link: true },
   ],
-  contacts: [{ id: 0, name: "+7(980)209-94-10" }],
+  contacts: [{ id: 0, icon: icon_phone, name: "+7(980)209-94-10" }],
 };

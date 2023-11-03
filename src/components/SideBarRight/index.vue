@@ -20,7 +20,10 @@
               :key="contact.id"
               :href="`tel: ${contact.name}`"
               class="header__menu--mobile__contacts"
-          >{{ contact.name }}</a>
+          >
+            <img class="header__menu--mobile__contacts--icon" :src="contact.icon" alt="Телефон">
+            {{ contact.name }}
+          </a>
         </div>
       </div>
     </div>
@@ -71,6 +74,10 @@ export default {
     bottom: 0;
     top: 0;
     z-index: 99;
+  }
+  .header__menu--mobile__contacts--icon {
+    width: 24px;
+    height: 24px;
   }
   .header__menu--mobile__wrapper {
     display: flex;
@@ -133,6 +140,9 @@ export default {
     text-decoration: none;
     font-size: 16px;
     color: $black;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 </style>

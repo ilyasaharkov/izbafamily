@@ -25,6 +25,7 @@
             :href="`tel:${item.name}`"
             class="header-wrapper__contacts--links"
           >
+            <img class="header-wrapper__contacts--links__image" :src="item.icon" alt="Телефон">
             {{ item.name }}
           </a>
         </div>
@@ -121,6 +122,13 @@ export default {
     background-color: #000;
     margin-bottom: 4px;
   }
+  .header-wrapper__contacts--links__image {
+    width: 30px;
+    height: 30px;
+  }
+  .header-wrapper__contacts--links {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -195,9 +203,11 @@ export default {
     column-gap: 20px;
   }
   .header-wrapper__contacts--links {
-    display: block;
+    display: flex;
     text-decoration: none;
     color: $white-blue;
+    align-items: center;
+    gap: 15px;
   }
 }
 
