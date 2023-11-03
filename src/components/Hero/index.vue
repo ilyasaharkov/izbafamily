@@ -33,7 +33,7 @@
 
 <script>
 import { heroViewObject } from "@/viewModels/Hero/";
-import { scrollToElementToID } from '@/utils/ScrollToElement/index'
+import { scrollToElementToID } from '@/utils/ScrollToElement/index.js'
 export default {
   setup() {
     return {

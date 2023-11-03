@@ -1,4 +1,4 @@
-import { reactive, ref } from "vue";
+import { reactive } from "vue";
 import { callBack } from "../../models/Forms/";
 import { api } from "@/api";
 
@@ -6,9 +6,8 @@ const callBackFormViewObject = reactive(callBack);
 let data = reactive({})
 
 let type_form = {
-    request: 'Форма после шапки',
-    middle: 'Форма после этап работы',
-    offer: 'Форма в подвале'
+    request: 'Консультируем бесплатно',
+    footer: 'Появились вопросы?',
 }
 
 const sendDataForm = ($type) => {
@@ -54,8 +53,19 @@ const checkValidForm = () => {
     return callBackFormViewObject.fields.every(item => item.error.status === false);
 }
 
+const formatPhoneNumber = (phoneNumber) => {
+    // Удалить все нецифровые символы из номера
+    const formattedNumber = phoneNumber.replace(/\D/g, '');
+
+    // Добавить "+7" к началу номера
+    const finalNumber = "+" + formattedNumber;
+
+    return finalNumber;
+}
+
 const getFormatTextForTelegram = () => {
-    return (`-----------------------------------------\n\n✅ Новая заявка от клиента\n\nТип формы: ${data.type}\n\nИмя: ${data.name}\n\nНомер телефона: ${data.phone}\n\n-----------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
+    const formatNumber = formatPhoneNumber(data.phone)
+    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.name}\n\n📱 Номер телефона: ${formatNumber}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
 }
 
 const clearAllFields = () => {

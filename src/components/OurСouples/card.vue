@@ -8,15 +8,17 @@
         <p class="our-couples__card--title">{{ item.title }}</p>
         <p class="our-couples__card--description">{{ item.description }}</p>
       </div>
-    <button
-        class="our-couples__card--button"
-    >
-      {{ button }}
-    </button>
+<!--    <button-->
+<!--        class="our-couples__card&#45;&#45;button"-->
+<!--        @click="scrollToElementToID('middle')"-->
+<!--    >-->
+<!--      {{ button }}-->
+<!--    </button>-->
     </div>
 </template>
 
 <script>
+import { scrollToElementToID } from '@/utils/ScrollToElement/index.js'
 export default {
   name: "card",
   props: {
@@ -28,6 +30,9 @@ export default {
       type: String,
       default: ''
     }
+  },
+  setup() {
+    return { scrollToElementToID }
   }
 }
 </script>
@@ -46,13 +51,13 @@ export default {
      border-radius: 20px;
      display: flex;
      flex-direction: column;
-     justify-content: space-between;
    }
    .our-couples__card--layout {
      padding: 15px 15px 0 15px;
    }
    .our-couples__card--button {
      margin: 25px 15px 0 15px;
+     padding: 15.5px;
    }
    .our-couples__card--image {
      border-top-left-radius: 20px;

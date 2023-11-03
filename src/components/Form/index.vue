@@ -2,8 +2,8 @@
   <section class="form" :id="id">
     <div class="container-wrapper">
       <div v-if="!callBackFormViewObject.status" class="form-layout">
-        <h3 class="form-title">{{ title }}</h3>
-        <p class="form-subtitle">{{ subtitle }}</p>
+        <h3 class="form-title" v-html="title" />
+        <p class="form-subtitle" v-html="subtitle" />
         <form
             @submit.prevent="sendDataForm(id)"
             class="form-wrapper"
@@ -58,7 +58,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "/src/assets/scss/_variables.scss";
 @import "/src/assets/scss/_mixin.scss";
 .form-button {
@@ -71,18 +71,24 @@ export default {
   .form-title {
     font-weight: 600;
     font-size: 24px;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
   }
   .form-subtitle {
     font-weight: 500;
-    font-size: 20px;
-    margin: 0 0 20px 0;
+    font-size: 16px;
+    margin: 0 0 40px 0;
+    line-height: 140%;
+    opacity: .8;
+    & > a {
+      font-size: 10px;
+    }
   }
   .form-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -91,7 +97,7 @@ export default {
   }
   .form-title {
     font-size: 28px;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
   }
   .form-wrapper {
     flex-direction: row;
@@ -108,11 +114,9 @@ export default {
   }
   .form-title {
     font-size: 28px;
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
   }
   .form-wrapper {
-    //display: grid;
-    //grid-template-columns: repeat(3, 1fr);
     display: flex;
   }
 }

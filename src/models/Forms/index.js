@@ -3,7 +3,7 @@ export const callBack = {
         {
             id: 0,
             code: 'name',
-            placeholder: 'Напишите имя',
+            placeholder: 'Ваше имя',
             title: '',
             error: { status: false, info: '*Поле имя не должно быть пустым' },
             answer: ''
@@ -11,7 +11,7 @@ export const callBack = {
         {
             id: 1,
             code: 'phone',
-            placeholder: 'Укажите номер телефона',
+            placeholder: '+7 (###) ###-##-##',
             title: '',
             error: { status: false, info: '*Введите весь номер телефона' },
             answer: ''

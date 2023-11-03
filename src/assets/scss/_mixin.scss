@@ -56,8 +56,9 @@
 @mixin title() {
   font-weight: 600;
   @media screen and (min-width: 340px) {
-    font-size: 30px;
-    margin: 0 0 10px 0;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+    line-height: 110%;
   }
   @media screen and (min-width: 768px) {
     font-size: 38px;

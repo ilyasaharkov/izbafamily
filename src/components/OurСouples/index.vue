@@ -78,6 +78,9 @@ export default {
       line-height: 140%;
       color: $black;
     }
+    .our-couples__title {
+      margin: 0 0 20px 0;
+    }
     .our-couples__offer {
       font-size: 14px;
       font-weight: 600;

@@ -64,6 +64,7 @@ export default {
     }
     .responsibilities-block__title {
       width: auto;
+      margin: 0 0 20px 0;
     }
     .responsibilities-block__card {
       display: flex;
@@ -96,7 +97,7 @@ export default {
 
   @media screen and (min-width: 1200px) {
     .responsibilities-block {
-      margin: 0 0 40px 0;
+      margin: 0 0 60px 0;
     }
     .responsibilities-block__card--wrapper {
       display: grid;

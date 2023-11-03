@@ -62,7 +62,7 @@ export default {
     }
     .form-input__block--error {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 12px;
       color: red;
       margin: 14px 0 0 0;
     }
@@ -81,7 +81,7 @@ export default {
   @media screen and (min-width: 1200px) {
     .form-input__block--error {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 </style>
