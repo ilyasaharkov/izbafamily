@@ -10,6 +10,13 @@
     />
     <CheckingCouples />
     <StepsWork />
+    <ResponsibilitiesCouple />
+    <Form
+        id="middle"
+        title="Появились вопросы?"
+        subtitle="Задайте нашим специалистам интересующий вопрос по семейным парам.<br>
+        Наш менеджер бесплатно проконсультирует вас!"
+    />
     <OurСouples />
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <!--        <Responsibilities />-->
@@ -23,7 +30,7 @@
     <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
     <Form
         id="footer"
-        title="Появились вопросы?"
+        title="Остались вопросы?"
         subtitle="Задайте нашим специалистам интересующий вопрос по семейным парам.<br>
         Наш менеджер бесплатно проконсультирует вас!"
     />
@@ -44,6 +51,7 @@ import Reviews from '../src/components/Reviews/index.vue'
 import LookingJob from '../src/components/LookingJob/index.vue'
 import StepsWork from '../src/components/StepsWork/index.vue'
 import Offers from '../src/components/Offers/index.vue'
+import ResponsibilitiesCouple from '../src/components/ResponsibilitiesCouple/index.vue'
 import Footer from "../src/components/Footer/index.vue";
 import SideBarRight from "../src/components/SideBarRight/index.vue";
 export default {
@@ -54,6 +62,7 @@ export default {
     SideBarRight,
     Form,
     OurСouples,
+    ResponsibilitiesCouple,
     Offers,
     StepsWork,
     Responsibilities,

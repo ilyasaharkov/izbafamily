@@ -102,6 +102,9 @@ export default {
     }
   }
   @media screen and (min-width: 1200px) {
+    .our-couples {
+      margin: 60px 0;
+    }
     .our-couples__subtitle {
       font-size: 18px;
       margin: 0 0 20px 0;

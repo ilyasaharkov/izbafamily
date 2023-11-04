@@ -117,7 +117,8 @@ export default {
     margin: 0 0 10px 0;
   }
   .form-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 300px;
   }
 }
 </style>

@@ -7,7 +7,8 @@ let data = reactive({})
 
 let type_form = {
     request: 'Консультируем бесплатно',
-    footer: 'Появились вопросы?',
+    middle: 'Появились вопросы?',
+    footer: 'Остались вопросы?',
 }
 
 const sendDataForm = ($type) => {
