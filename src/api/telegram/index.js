@@ -1,8 +1,10 @@
+
+
 const dictBots = {
-    report: '6754495965:AAFndC9OskOTEwAOU282F3AjPdR0RGnQPSw',
-    lead: '6719310584:AAEUv3w6m7eH6GrCyTo1kNOKeTkZu0pScuI'
+    report: process.env.VUE_APP_BOT_REPORT_KEY,
+    lead: process.env.VUE_APP_BOT_LEAD_KEY
 }
-const chatID = '-4008082861'
+const chatID = process.env.VUE_APP_CHAT_ID
 
 export const tgBotSender = async (targetBot, reportData) => {
     const selectBot = dictBots[targetBot]
