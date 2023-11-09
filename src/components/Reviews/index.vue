@@ -31,7 +31,6 @@ export default {
   setup() {
     return {
       reviewsModelViewObject
-
     }
   }
 }

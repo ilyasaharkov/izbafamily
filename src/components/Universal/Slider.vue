@@ -112,7 +112,25 @@ export default {
     margin: 0 0 20px 0;
   }
   .swiper-navigation {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .swiper-navigation__button {
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 50%;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .swiper-navigation__button:nth-child(2) {
+    svg {
+      transform: rotate(180deg);
+    }
   }
   .swiper-top__info--title {
     @include title();
