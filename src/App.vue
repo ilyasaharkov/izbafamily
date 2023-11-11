@@ -54,6 +54,9 @@ import Offers from '../src/components/Offers/index.vue'
 import ResponsibilitiesCouple from '../src/components/ResponsibilitiesCouple/index.vue'
 import Footer from "../src/components/Footer/index.vue";
 import SideBarRight from "../src/components/SideBarRight/index.vue";
+import { useRoute } from 'vue-router';
+import { watch } from "vue";
+import { scrollToElementToID } from '@/utils/ScrollToElement/index.js'
 export default {
   name: "App",
   components: {
@@ -72,6 +75,13 @@ export default {
     LookingJob,
     Footer
   },
+  setup() {
+    const route = useRoute();
+
+    watch(() => route.query.block, (newValue) => {
+      if (newValue) scrollToElementToID(newValue)
+    });
+  }
 };
 </script>
 
