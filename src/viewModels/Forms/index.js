@@ -66,7 +66,7 @@ const formatPhoneNumber = (phoneNumber) => {
 
 const getFormatTextForTelegram = () => {
     const formatNumber = formatPhoneNumber(data.phone)
-    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.name}\n\n📱 Номер телефона:\n\n ${formatNumber}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
+    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.name}\n\n📱 Номер телефона:\n\n ${formatNumber}\n\n 🏙 Город: ${data.select}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
 }
 
 const clearAllFields = () => {

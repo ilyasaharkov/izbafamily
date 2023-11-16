@@ -15,7 +15,7 @@
           :style="item.error.status ? 'border: 1px solid red': ''"
       >
       <input
-          v-else
+          v-if="item.code === 'input'"
           :name="item.code"
           :id="item.code"
           v-model="item.answer"
@@ -23,7 +23,17 @@
           :placeholder="item.placeholder"
           :style="item.error.status ? 'border: 1px solid red': ''"
       >
-      <p class="form-input__block--error" v-if="item.error.status">{{ item.error.info }}</p>
+      <select
+          v-if="item.code === 'select'"
+          :style="item.error.status ? 'border: 1px solid red': ''"
+          v-model="item.answer"
+      >
+        <option value="" disabled selected>{{ item.placeholder }}</option>
+        <option v-for="(select, index) in item.list"
+                :key="index" :value="select">{{ select }}</option>
+      </select>
+
+    <p class="form-input__block--error" v-if="item.error.status">{{ item.error.info }}</p>
   </div>
 </template>
 
@@ -48,12 +58,12 @@ export default {
       padding: 15.5px 20px;
       font-size: 16px;
       font-weight: 600;
-      border: 1px solid $f15c63;
+      border: 1px solid #198737;
       border-radius: 10px;
       height: -webkit-fill-available;
     }
     .form-input:focus {
-      outline: 1px solid $f15c63;
+      outline: 1px solid #198737;
       transition: all 0.3s ease;
     }
     .form-input__block {
@@ -84,4 +94,23 @@ export default {
       font-size: 14px;
     }
   }
+
+select {
+  padding: 15.5px 40px 15.5px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #198737;
+  border-radius: 10px;
+  height: -webkit-fill-available;
+  -webkit-appearance: none; /* Убираем стандартные стили для Safari */
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Стили для опций выпадающего списка */
+option {
+  //padding: 12px 16px;
+}
 </style>
