@@ -7,14 +7,14 @@ const routes = [
         component: () => import('../pages/index.vue')
     },
     {
-        path: '/thank-you/',
-        name: 'thank-you',
-        component: () => import('../pages/thank-you.vue')
+        path: '/thank-you',
+        name: 'ThankYou',
+        component: () => import('../pages/thankYou.vue')
     },
     {
         path: '/:pathMatch(.*)*',
-        name: 'not-found',
-        component: () => import('../pages/not-found.vue')
+        name: 'NotFound',
+        component: () => import('../pages/notFound.vue')
     },
 ];
 
