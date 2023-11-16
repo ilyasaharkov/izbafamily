@@ -23,11 +23,8 @@ const sendDataForm = ($type) => {
     callBackFormViewObject.status = true
     api.tgBotSender('lead', result)
         .then(() => {
-            callBackFormViewObject.status = true
             clearAllFields()
-            setTimeout(() => {
-                callBackFormViewObject.status = false
-            }, 3000)
+            window.open('/thank-you', '_self');
         })
         .catch(error => {
             console.log('error', error)

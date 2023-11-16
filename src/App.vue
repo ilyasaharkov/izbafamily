@@ -1,35 +1,6 @@
 <template>
   <div class="app">
-    <Header />
-    <Hero />
-    <Form
-        id="request"
-        title="Консультируем бесплатно"
-    />
-    <CheckingCouples />
-    <StepsWork />
-    <ResponsibilitiesCouple />
-    <Form
-        id="middle"
-        title="Появились вопросы?"
-    />
-    <OurСouples />
-    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <!--        <Responsibilities />-->
-<!--    <Offers/>-->
-    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <!-- TODO ПОКА УБИРАЕМ   -->
-    <!--    <Prices />-->
-    <Reviews />
-    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <!--    <LookingJob />-->
-    <!-- TODO ПЕРЕНЕСТИ НА СТРАНИЦУ ВАКАНСИЙ -->
-    <Form
-        id="footer"
-        title="Остались вопросы?"
-    />
-    <Footer />
-    <SideBarRight />
+    <router-view/>
   </div>
 </template>
 
