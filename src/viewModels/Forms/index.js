@@ -25,7 +25,7 @@ const sendDataForm = async ($type) => {
     api.tgBotSender('lead', result)
         .then(() => {
             clearAllFields()
-            window.open('https://izbafamily.ru/thank-you', '_self');
+            // window.open('https://izbafamily.ru/thank-you', '_self');
         })
         .catch(error => {
             console.log('error', error)
