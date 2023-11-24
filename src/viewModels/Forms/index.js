@@ -11,8 +11,7 @@ let type_form = {
     footer: 'Остались вопросы?',
 }
 
-const sendDataForm = async ($type) => {
-    console.log('sendDataForm')
+const sendDataForm = ($type) => {
     if(!checkValidForm()) return
     const type = type_form[$type]
     data = callBackFormViewObject.fields.reduce((acc, item) => {
@@ -33,35 +32,7 @@ const sendDataForm = async ($type) => {
                 .then()
                 .catch()
         })
-
-    await fetchAuthLogin({ email: 'test@test.com', password: '123' })
 }
-
-export const fetchAuthLogin = async (data) => {
-    try {
-        const response = await fetch(`https://vast-cyan-tortoise-gown.cyclic.app/api/auth/login`, {
-            method: 'POST',
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(data),
-        });
-
-        if (response.ok) {
-            console.log('response', response)
-            const result = await response.json();
-            // Сохранение токена в sessionStorage
-            // sessionStorage.setItem('token', result.token);
-            // window.location.assign('/dashboard');
-        } else {
-            return response;
-        }
-    } catch (error) {
-        console.error('Ошибка при запросе:', error);
-    }
-};
 
 // Проверяем на заполненность формы
 const checkValidForm = () => {
