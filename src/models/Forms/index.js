@@ -24,7 +24,7 @@ export const callBack = {
             title: '',
             error: { status: false, info: '*Выберите город' },
             answer: ''
-        },
+        }
     ],
     status: false,
     button: 'Оставить заявку',
