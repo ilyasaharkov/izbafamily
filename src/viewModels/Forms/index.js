@@ -23,7 +23,7 @@ const sendDataForm = async ($type) => {
     if(!checkValidForm()) return
     const type = type_form[$type]
     data = callBackFormViewObject.fields.reduce((acc, item) => {
-        acc[item.code] = item.answer;
+        acc[item.key] = item.answer;
         acc.client = null
         acc.status = false
         return acc;
@@ -31,6 +31,7 @@ const sendDataForm = async ($type) => {
     data.type = type
     callBackFormViewObject.status = true
     const result = getFormatTextForTelegram()
+    console.log('result', result)
     try {
         api.tgBotSender('lead', result)
             .then(() => {
@@ -79,7 +80,7 @@ const formatPhoneNumber = (phoneNumber) => {
 
 const getFormatTextForTelegram = () => {
     const formatNumber = formatPhoneNumber(data.phone)
-    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.input}\n\n📱 Номер телефона:\n\n ${formatNumber}\n\n 🏙 Город: ${data.select}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
+    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.name}\n\n📱 Номер телефона:\n\n ${formatNumber}\n\n 🏙 Город: ${data.city}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
 }
 
 // Проверяем на заполненность формы
