@@ -12,14 +12,29 @@
 <!--          <a class="form-social__link&#45;&#45;vk" href="#">Связаться в Vkontakte</a>-->
         </div>
         <p class="form-or">или оставьте заявку</p>
-        <form
-            @submit.prevent="sendDataForm(id)"
-            class="form-wrapper"
-            :style="`flex-direction: ${flexDirection}`"
-        >
-          <SchemaFields  :schema-form="callBackFormViewObject.fields" />
-          <button class="form-button"> {{ callBackFormViewObject.button }} </button>
-        </form>
+        <template v-if="fetchLoad.success">
+          <div class="form-layout--success">
+            <p class="form-layout--success__title">Благодарим за Вашу заявку!</p><br>
+            <p class="form-layout--success__subtitle">Ваш запрос успешно отправлен.<br> Наш менеджер свяжется с Вами в течение <span>15 минут</span>.</p>
+          </div>
+        </template>
+        <template v-else>
+          <form
+              @submit.prevent="sendDataForm(id)"
+              class="form-wrapper"
+              :style="`flex-direction: ${flexDirection}`"
+          >
+            <SchemaFields  :schema-form="callBackFormViewObject.fields" />
+            <button class="form-button">
+              <template v-if="fetchLoad.loading">
+                <span class="loader" />
+              </template>
+              <template v-else>
+                {{ callBackFormViewObject.button }}
+              </template>
+            </button>
+          </form>
+        </template>
       </div>
     </div>
   </section>
@@ -28,7 +43,8 @@
 <script>
 import {
   callBackFormViewObject,
-  sendDataForm
+  sendDataForm,
+  fetchLoad,
   } from "@/viewModels/Forms";
 import SchemaFields from "@/components/Universal/SchemaFields";
 
@@ -56,7 +72,8 @@ export default {
   setup() {
     return {
       callBackFormViewObject,
-      sendDataForm
+      sendDataForm,
+      fetchLoad
     }
   }
 }
@@ -65,14 +82,58 @@ export default {
 <style lang="scss">
 @import "/src/assets/scss/_variables.scss";
 @import "/src/assets/scss/_mixin.scss";
+.form-layout--success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .form-button {
   @include button
+}
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @media screen and (min-width: 340px) {
   .form-social__link {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .form-layout--success {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 0;
+  }
+  .form-layout--success__title {
+    color: #198737;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .form-layout--success__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 130%;
+    & > span {
+      color: #198737;
+    }
   }
   .form-or {
     margin: 30px 0;

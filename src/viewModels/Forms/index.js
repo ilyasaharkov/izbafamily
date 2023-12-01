@@ -1,8 +1,13 @@
 import { reactive } from "vue";
 import { callBack } from "../../models/Forms/";
+import { api } from "@/api";
 
 const callBackFormViewObject = reactive(callBack);
 let data = reactive({})
+const fetchLoad = reactive({
+    loading: false,
+    success: false
+})
 
 let type_form = {
     request: 'Консультируем бесплатно',
@@ -11,6 +16,10 @@ let type_form = {
 }
 
 const sendDataForm = async ($type) => {
+    if (fetchLoad.loading) return
+
+    fetchLoad.loading = true
+
     if(!checkValidForm()) return
     const type = type_form[$type]
     data = callBackFormViewObject.fields.reduce((acc, item) => {
@@ -21,9 +30,19 @@ const sendDataForm = async ($type) => {
     }, {});
     data.type = type
     callBackFormViewObject.status = true
-    //    TODO ДОДЕЛАТЬ СБОР ЛИДОВ
+    const result = getFormatTextForTelegram()
     try {
-        const response = await fetch("http://localhost:4000/api/leads/create", {
+        api.tgBotSender('lead', result)
+            .then(() => {
+                clearAllFields()
+            })
+            .catch(error => {
+                console.log('error', error)
+                api.tgBotSender('report', '[Ошибка]: Не удалось отправить форму.')
+                    .then()
+                    .catch()
+            })
+        const response = await fetch("https://vast-cyan-tortoise-gown.cyclic.app/api/leads/create", {
             method: "POST",
             credentials: 'include',
             headers: {
@@ -34,14 +53,33 @@ const sendDataForm = async ($type) => {
 
         if (response.ok) {
             clearAllFields()
+            fetchLoad.loading = false
+            fetchLoad.success = true
         } else {
+            fetchLoad.loading = false
             return console.log('[Ошибка]: Не удалось отправить данные')
         }
     } catch (error) {
+        fetchLoad.loading = false
         console.error("Ошибка при запросе:", error);
     }
 
 
+}
+
+const formatPhoneNumber = (phoneNumber) => {
+    // Удалить все нецифровые символы из номера
+    const formattedNumber = phoneNumber.replace(/\D/g, '');
+
+    // Добавить "+7" к началу номера
+    const finalNumber = "+" + formattedNumber;
+
+    return finalNumber;
+}
+
+const getFormatTextForTelegram = () => {
+    const formatNumber = formatPhoneNumber(data.phone)
+    return (`-------------------------------------\n\n✅ Новая заявка от клиента\n\n❓ Тип формы: ${data.type}\n\n👨‍💼 Имя: ${data.input}\n\n📱 Номер телефона:\n\n ${formatNumber}\n\n 🏙 Город: ${data.select}\n\n-------------------------------------`).replace(/(\[[^\][]*]\(https[^()]*\))|[_*[\]()~>#+=|{}.!-]/gi, (x, y) => y || '\\' + x)
 }
 
 // Проверяем на заполненность формы
@@ -67,6 +105,7 @@ const clearAllFields = () => {
 }
 
 export {
+    fetchLoad,
     callBackFormViewObject,
     sendDataForm
 };
