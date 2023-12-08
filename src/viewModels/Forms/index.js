@@ -25,6 +25,7 @@ const sendDataForm = async ($type) => {
     data = callBackFormViewObject.fields.reduce((acc, item) => {
         acc[item.key] = item.answer;
         acc.created_date = new Date()
+        acc.update_date = ''
         acc.client = 'Не указано'
         acc.status = 'Нужно позвонить'
         return acc;
