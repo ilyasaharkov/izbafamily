@@ -28,7 +28,7 @@ export const tgBotSender = async (targetBot, reportData) => {
                 if (response.ok) {
                    return true
                 } else {
-                    return  [response.status, response.statusText];
+                    return [response.status, response.statusText];
                 }
             })
             .catch((error) => {

@@ -45,7 +45,7 @@ const sendDataForm = async ($type) => {
                     .then()
                     .catch()
             })
-        const response = await fetch("https://vast-cyan-tortoise-gown.cyclic.app/api/leads/create", {
+        const response = await fetch("https://pipakalot.beget.app/api/leads/create", {
             method: "POST",
             credentials: 'include',
             headers: {
