@@ -23,7 +23,7 @@ export const callBack = {
             code: 'select',
             key: 'city',
             placeholder: 'Выберите город',
-            list: ['Санкт-Петербург', 'Москва', 'Лен.область', 'Моск.Область'],
+            list: ['Москва', 'Санкт-Петербург'],
             title: '',
             error: { status: false, info: '*Выберите город' },
             answer: ''
