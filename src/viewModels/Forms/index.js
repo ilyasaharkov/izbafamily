@@ -25,6 +25,7 @@ const sendDataForm = async ($type) => {
     data = callBackFormViewObject.fields.reduce((acc, item) => {
         acc[item.key] = item.answer;
         acc.created_date = new Date()
+        acc.created_date = convertToISODate(acc.created_date)
         acc.update_date = ''
         acc.client = 'Не указано'
         acc.status = 'Нужно позвонить'
@@ -33,7 +34,6 @@ const sendDataForm = async ($type) => {
     data.type = type
     callBackFormViewObject.status = true
     const result = getFormatTextForTelegram()
-    console.log('result', result)
     try {
         api.tgBotSender('lead', result)
             .then(() => {
@@ -105,6 +105,24 @@ const clearAllFields = () => {
     callBackFormViewObject.fields.forEach((item) => {
         item.answer = ''
     })
+}
+
+const convertToISODate = (inputDate) => {
+    // Преобразуем строку с датой в объект Date
+    const dateObject = new Date(inputDate);
+
+    // Получаем компоненты даты и времени
+    const year = dateObject.getFullYear();
+    const month = String(dateObject.getMonth() + 1).padStart(2, '0'); // Месяцы в JavaScript начинаются с 0
+    const day = String(dateObject.getDate()).padStart(2, '0');
+    const hours = String(dateObject.getHours()).padStart(2, '0');
+    const minutes = String(dateObject.getMinutes()).padStart(2, '0');
+    const seconds = String(dateObject.getSeconds()).padStart(2, '0');
+
+    // Собираем строку в формате ISO 8601 без часового пояса
+    const isoDate = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+
+    return isoDate;
 }
 
 export {
